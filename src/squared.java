@@ -1,16 +1,18 @@
 public class squared {
     static long solution(long n) {
-        int answer = (int) Math.sqrt(n);
-        if(answer!= 1 && n % answer == 0) {
-            answer += 1;
-            answer *= answer;
-        }else
-            return -1;
+        double answer = Math.sqrt(n);
+        long answer2 = (long) Math.sqrt(n);
 
-        return Long.valueOf(answer);
+        if(answer-answer2 != 0)
+            return-1;
+        else{
+            answer2 += 1;
+            answer2 *= answer2;
+        }
+        return answer2;
     }
 
     public static void main(String[] args){
-        System.out.println(solution(121));
+        System.out.println(solution(1));
     }
 }
