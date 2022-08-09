@@ -1,3 +1,4 @@
+package level1;
 
 public class sniffling {
     public String solution(int num) {

@@ -1,3 +1,5 @@
+package level1;
+
 import java.util.Arrays;
 import java.util.Locale;
 
@@ -7,23 +9,23 @@ public class strangeString {
         String[] sa = s.split(" ");
         for(int i=0; i<sa.length;i++){
             String result ="";
+            sa[i] = sa[i].toUpperCase();
             String[] sna = sa[i].split("");
-            sna[0] = sna[0].toUpperCase();
-            for(int j=1; j<sna.length; j++){
-                if(j %2 == 0)
-                    sna[j] = sna[j].toUpperCase();
-                else
+
+            for(int j=1; j<sna.length; j++)
+                if(j %2 != 0)
                     sna[j] = sna[j].toLowerCase();
-            }
+
             for (String ss : sna)
                 result += ss;
+
             sa[i] = result;
         }
 
         for (String aaaa : sa)
             answer+= aaaa+" ";
 
-        answer = answer.substring(0, answer.length()-1);
+        //answer = answer.substring(0, answer.length()-1);
         return answer;
     }
 

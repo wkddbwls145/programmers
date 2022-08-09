@@ -1,3 +1,5 @@
+package level1;
+
 public class squared {
     static long solution(long n) {
         double answer = Math.sqrt(n);

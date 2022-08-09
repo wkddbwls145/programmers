@@ -1,3 +1,5 @@
+package level1;
+
 public class digitAddNum {
     static int solution(int n) {
         int answer = 0;

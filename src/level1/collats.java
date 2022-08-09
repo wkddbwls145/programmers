@@ -1,3 +1,5 @@
+package level1;
+
 public class collats {
     static int solution(int num) {
         int answer = 0;
